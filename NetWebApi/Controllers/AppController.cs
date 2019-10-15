@@ -26,22 +26,22 @@ namespace QWZE.JF.Controllers
         /// <returns>人员列表</returns>
         [HttpGet]
         [Route("Allpersons")]
-        public async Task<List<PersonInfo>> getallpersons()
+        public async Task<YunModel<object>> getallpersons()
         {
-            //string url = "/gateway/opendata-control/data/getallpersons?accessToken=" + await _Authentication.GetCorrectToken();
-            //var parameters = new Dictionary<string, string>();
-            //parameters.Add("eid", KingdeeConfig.Eid);
-            //parameters.Add("time", DateTime.Now.To24hStr());
-            //return await _Authentication.CallHttpPost<YunModel<object>>(url, parameters);
-            PersonInfo data = new PersonInfo()
-            {
-                age = 100,
-                insertTime = DateTime.Now,
-                name = "我爱你傻瓜",
-                phone = "520"
-            };
-            _personDal.AddData(data);
-            return null;
+            string url = "/gateway/opendata-control/data/getallpersons?accessToken=" + await _Authentication.GetCorrectToken();
+            var parameters = new Dictionary<string, string>();
+            parameters.Add("eid", KingdeeConfig.Eid);
+            parameters.Add("time", DateTime.Now.To24hStr());
+            return await _Authentication.CallHttpPost<YunModel<object>>(url, parameters);
+            //PersonInfo data = new PersonInfo()
+            //{
+            //    age = 100,
+            //    insertTime = DateTime.Now,
+            //    name = "我爱你傻瓜",
+            //    phone = "520"
+            //};
+            //_personDal.AddData(data);
+            //return null;
         }
     }
 }
