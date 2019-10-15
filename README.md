@@ -1,31 +1,14 @@
-# marisfrolg.fee
+# NetWebApi
 
 #### 项目介绍
-费用系统
+NetFramework 下的一个webapi
 
 #### 软件架构
-软件架构说明
-
+使用了autofac和auth2.0 完成了一个简单的API框架。
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
+直接部署，或者直接运行调试。Swagger地址 http://localhost:端口号/swagger，其中一些细节地方需要继续修改
 
 #### 码云特技
 
